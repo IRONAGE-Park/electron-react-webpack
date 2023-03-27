@@ -1,0 +1,7 @@
+#!/bin/sh
+
+DIR="$( cd "$( dirname "$1" )" && pwd -P )"
+
+DIR_RESOURCE="$2/Electron React Webpack.app/Contents/Resources"
+
+LOG_FILE="result.log"

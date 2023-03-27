@@ -1,0 +1,28 @@
+{
+  "extends": ["react-app", "prettier", "eslint:recommended"],
+  "plugins": ["react", "@typescript-eslint", "prettier", "jest"],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {
+    "prettier/prettier": "error",
+    "@typescript-eslint/no-unused-vars": "off",
+    "import/no-extraneous-dependencies": ["warn", { "devDependencies": true }],
+    "import/newline-after-import": "error",
+    "import/order": "error",
+    "no-unused-vars": "warn",
+    "no-undef": "off",
+    "no-case-declarations": "off",
+    "no-console": ["warn", { "allow": ["error", "info"] }],
+    "spaced-comment": "error",
+    "camelcase": "error",
+    // Note: you must disable the base rule as it can report incorrect errors
+    "no-dupe-class-members": "off",
+    "@typescript-eslint/no-dupe-class-members": "warn"
+  }
+}

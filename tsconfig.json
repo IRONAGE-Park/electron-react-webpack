@@ -1,11 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "baseUrl": "./",
+    "target": "ES5",
+    "module": "ESNext",
+    "outDir": "./build",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -13,14 +12,24 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
-    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "paths": {
+      "@root/*": ["src/*"],
+      "@assets/*": ["src/assets/*"],
+      "@constants/*": ["src/constants/*"],
+      "@errors/*": ["src/errors/*"],
+      "@filters/*": ["src/filters/*"],
+      "@guards/*": ["src/guards/*"],
+      "@libs/*": ["src/libs/*"],
+      "@main/*": ["src/main/*"],
+      "@renderer/*": ["src/renderer/*"],
+      "@preloads/*": ["src/preload/*"],
+      "@bridges/*": ["src/preload/bridges/*"]
+    }
   },
-  "include": [
-    "src"
-  ]
+  "include": ["./src/**/*"]
 }
